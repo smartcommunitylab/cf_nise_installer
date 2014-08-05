@@ -34,7 +34,7 @@ Run the commands below on your server:
 
 ```sh
 sudo apt-get install curl
-bash < <(curl -s -k -B https://raw.githubusercontent.com/yudai/cf_nise_installer/${INSTALLER_BRANCH:-master}/scripts/bootstrap.sh)
+bash < <(curl -s -k -B https://raw.githubusercontent.com/smartcampuslab/cf_nise_installer/${INSTALLER_BRANCH:-master}/scripts/bootstrap.sh)
 ```
 
 The `bootstrap.sh` script installs everything necessary to your devbox. This command may take a couple of hours at first run.
@@ -105,9 +105,9 @@ You can customize your installation using environment variables. Note that varia
 
 | Name              | Description                              | Used in                                 | Default                                        |
 | :---------------: | :--------------------------------------: | :-------------------------------------: | :--------------------------------------------: |
-| INSTALLER_URL     | URI for cf_nise_installer                | bootstrap.sh                            | https://github.com/yudai/cf_nise_installer.git |
+| INSTALLER_URL     | URI for cf_nise_installer                | bootstrap.sh                            | https://github.com/smartcampuslab/cf_nise_installer.git |
 | INSTALLER_BRANCH  | Branch/Revision for cf_nise_installer    | bootstrap.sh                            | master                                         |
-| CF_RELEASE_URL    | URI for cf-release                       | clone_cf_release.sh                     | *nil* (https://github.com/cloudfoundry/cf-release.git is set to submodule)|
+| CF_RELEASE_URL    | URI for cf-release                       | clone_cf_release.sh                     | *nil* (https://github.com/smartcampuslab/cf-release.git is set to submodule)|
 | CF_RELEASE_BRANCH | Branch/Revision for cf-release           | clone_cf_release.sh                     | *nil* (certain stable revision is set to submodule) |
 | CF_RELEASE_USE_HEAD | Create a dev release with the head of the branch | clone_cf_release.sh           | no (set `yes` to enable)                       |
 | NISE_BOSH_REV     | Git revision specifier [note] of nise_bosh repo | clone_nise_bosh.sh               | *nil* (currently checked-out revision)         |
